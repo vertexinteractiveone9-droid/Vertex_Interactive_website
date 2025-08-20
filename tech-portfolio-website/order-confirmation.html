@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Confirmed - TechPro Solutions</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <meta http-equiv="refresh" content="8;url=index.html">
+</head>
+<body>
+    <div class="thank-you-page">
+        <div class="thank-you-container">
+            <div class="success-icon">
+                <svg viewBox="0 0 50 50">
+                    <circle class="success-circle" cx="25" cy="25" r="20"/>
+                    <path class="success-check" d="m15,25 l5,5 l15,-15"/>
+                </svg>
+            </div>
+            <h1>Order Confirmed!</h1>
+            <p>Thank you for your purchase of Inaya School Management Software!</p>
+            
+            <div class="order-details">
+                <h3>What's Next?</h3>
+                <ul>
+                    <li>✅ Your order has been received and processed</li>
+                    <li>📧 You'll receive a confirmation email shortly</li>
+                    <li>📞 Our team will contact you within 24 hours</li>
+                    <li>🚀 We'll begin the setup process for your school</li>
+                </ul>
+            </div>
+
+            <div class="redirect-info">
+                <p>You'll be redirected to the homepage in <span id="countdown">8</span> seconds.</p>
+            </div>
+            
+            <div class="thank-you-actions">
+                <a href="index.html" class="btn primary">Go to Homepage</a>
+                <a href="about.html" class="btn secondary">Learn More About Us</a>
+            </div>
+        </div>
+    </div>
+
+    <style>
+    .thank-you-page {
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: var(--bg-primary);
+        padding: 2rem;
+    }
+
+    .thank-you-container {
+        background: var(--bg-secondary);
+        padding: 3rem;
+        border-radius: var(--radius-lg);
+        border: 1px solid var(--border-primary);
+        text-align: center;
+        max-width: 600px;
+    }
+
+    .success-icon {
+        width: 80px;
+        height: 80px;
+        margin: 0 auto 2rem;
+    }
+
+    .success-icon svg {
+        width: 100%;
+        height: 100%;
+        stroke-width: 2;
+        stroke: var(--success);
+        fill: none;
+    }
+
+    .success-circle {
+        stroke-dasharray: 126;
+        stroke-dashoffset: 126;
+        animation: success-circle 0.8s ease-in-out forwards;
+    }
+
+    .success-check {
+        stroke-dasharray: 20;
+        stroke-dashoffset: 20;
+        animation: success-check 0.4s ease-in-out 0.4s forwards;
+    }
+
+    @keyframes success-circle {
+        to {
+            stroke-dashoffset: 0;
+        }
+    }
+
+    @keyframes success-check {
+        to {
+            stroke-dashoffset: 0;
+        }
+    }
+
+    .thank-you-container h1 {
+        color: var(--text-primary);
+        margin-bottom: 1rem;
+        font-size: 2.5rem;
+    }
+
+    .thank-you-container p {
+        color: var(--text-secondary);
+        margin-bottom: 2rem;
+        font-size: 1.1rem;
+    }
+
+    .order-details {
+        background: var(--bg-tertiary);
+        padding: 2rem;
+        border-radius: var(--radius-md);
+        border: 1px solid var(--border-primary);
+        margin-bottom: 2rem;
+        text-align: left;
+    }
+
+    .order-details h3 {
+        color: var(--text-primary);
+        margin-bottom: 1rem;
+        text-align: center;
+    }
+
+    .order-details ul {
+        list-style: none;
+        padding: 0;
+    }
+
+    .order-details li {
+        color: var(--text-secondary);
+        margin-bottom: 0.8rem;
+        padding-left: 0;
+        font-size: 1rem;
+        line-height: 1.5;
+    }
+
+    .redirect-info {
+        background: var(--bg-tertiary);
+        padding: 1rem;
+        border-radius: var(--radius-md);
+        margin-bottom: 2rem;
+        border: 1px solid var(--border-primary);
+    }
+
+    .redirect-info p {
+        margin: 0;
+        color: var(--text-muted);
+        font-size: 0.9rem;
+    }
+
+    #countdown {
+        color: var(--accent-primary);
+        font-weight: 600;
+    }
+
+    .thank-you-actions {
+        display: flex;
+        justify-content: center;
+        gap: 1rem;
+        flex-wrap: wrap;
+    }
+    </style>
+
+    <script>
+    let countdown = 8;
+    const countdownElement = document.getElementById('countdown');
+    
+    setInterval(() => {
+        countdown--;
+        countdownElement.textContent = countdown;
+        if (countdown <= 0) {
+            window.location.href = 'index.html';
+        }
+    }, 1000);
+    </script>
+</body>
+</html>

@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products - TechPro Solutions</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="index.html">TechPro</a>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="about.html" class="nav-link">About</a>
+                </li>
+                <li class="nav-item">
+                    <a href="products.html" class="nav-link active">Products</a>
+                </li>
+                <li class="nav-item">
+                    <a href="cart.html" class="nav-link">Cart</a>
+                </li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Products Hero Section -->
+    <section class="products-hero">
+        <div class="container">
+            <h1 class="page-title">Our Products</h1>
+            <p class="page-subtitle">Innovative software solutions designed to transform your business</p>
+        </div>
+    </section>
+
+    <!-- Featured Product Section -->
+    <section class="featured-product">
+        <div class="container">
+            <div class="product-showcase">
+                <div class="product-image">
+                    <div class="product-logo">
+                        <div class="logo-placeholder">
+                            <svg width="120" height="120" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <rect width="120" height="120" rx="20" fill="url(#gradient)"/>
+                                <path d="M30 40h60v8H30v-8zm0 16h60v8H30v-8zm0 16h40v8H30v-8z" fill="white" opacity="0.9"/>
+                                <circle cx="80" cy="76" r="12" fill="white" opacity="0.7"/>
+                                <defs>
+                                    <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                                        <stop offset="0%" style="stop-color:#4F46E5"/>
+                                        <stop offset="100%" style="stop-color:#7C3AED"/>
+                                    </linearGradient>
+                                </defs>
+                            </svg>
+                        </div>
+                        <h2>Inaya</h2>
+                        <p>School Management Software</p>
+                    </div>
+                </div>
+                <div class="product-info">
+                    <h3>Comprehensive School Management Solution</h3>
+                    <p class="product-description">Inaya is a complete school management software designed to streamline administrative tasks, enhance communication between stakeholders, and provide powerful analytics for educational institutions.</p>
+                    
+                    <div class="product-features">
+                        <h4>Key Features:</h4>
+                        <ul>
+                            <li>Student Information Management</li>
+                            <li>Grade and Attendance Tracking</li>
+                            <li>Parent-Teacher Communication Portal</li>
+                            <li>Financial Management & Fee Collection</li>
+                            <li>Timetable & Resource Management</li>
+                            <li>Comprehensive Reporting & Analytics</li>
+                        </ul>
+                    </div>
+
+                    <div class="product-stats">
+                        <div class="stat">
+                            <h4>500+</h4>
+                            <p>Schools Trust Inaya</p>
+                        </div>
+                        <div class="stat">
+                            <h4>99.9%</h4>
+                            <p>Uptime Guarantee</p>
+                        </div>
+                        <div class="stat">
+                            <h4>24/7</h4>
+                            <p>Customer Support</p>
+                        </div>
+                    </div>
+
+                    <div class="product-actions">
+                        <button class="btn primary" onclick="openProductModal()">View Details</button>
+                        <button class="btn secondary" onclick="addToCart()">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Product Modal -->
+    <div class="modal-overlay" id="productModal">
+        <div class="modal">
+            <div class="modal-header">
+                <h2>Inaya School Management Software</h2>
+                <button class="close-btn" onclick="closeProductModal()">&times;</button>
+            </div>
+            <div class="modal-content">
+                <div class="screenshots-section">
+                    <h3>Screenshots</h3>
+                    <div class="screenshots-grid">
+                        <div class="screenshot-placeholder">
+                            <div class="placeholder-content">
+                                <svg width="60" height="60" viewBox="0 0 60 60" fill="none">
+                                    <rect width="60" height="60" rx="8" fill="#374151"/>
+                                    <rect x="10" y="15" width="40" height="4" fill="#6B7280"/>
+                                    <rect x="10" y="25" width="30" height="4" fill="#6B7280"/>
+                                    <rect x="10" y="35" width="35" height="4" fill="#6B7280"/>
+                                </svg>
+                                <p>Dashboard View</p>
+                            </div>
+                        </div>
+                        <div class="screenshot-placeholder">
+                            <div class="placeholder-content">
+                                <svg width="60" height="60" viewBox="0 0 60 60" fill="none">
+                                    <rect width="60" height="60" rx="8" fill="#374151"/>
+                                    <circle cx="30" cy="20" r="8" fill="#6B7280"/>
+                                    <rect x="15" y="35" width="30" height="4" fill="#6B7280"/>
+                                    <rect x="20" y="43" width="20" height="4" fill="#6B7280"/>
+                                </svg>
+                                <p>Student Profiles</p>
+                            </div>
+                        </div>
+                        <div class="screenshot-placeholder">
+                            <div class="placeholder-content">
+                                <svg width="60" height="60" viewBox="0 0 60 60" fill="none">
+                                    <rect width="60" height="60" rx="8" fill="#374151"/>
+                                    <rect x="10" y="10" width="8" height="8" fill="#6B7280"/>
+                                    <rect x="22" y="10" width="8" height="8" fill="#4F46E5"/>
+                                    <rect x="34" y="10" width="8" height="8" fill="#6B7280"/>
+                                    <rect x="10" y="22" width="40" height="25" fill="#374151" stroke="#6B7280"/>
+                                </svg>
+                                <p>Grade Management</p>
+                            </div>
+                        </div>
+                        <div class="screenshot-placeholder">
+                            <div class="placeholder-content">
+                                <svg width="60" height="60" viewBox="0 0 60 60" fill="none">
+                                    <rect width="60" height="60" rx="8" fill="#374151"/>
+                                    <path d="M20 15l20 10-20 10V15z" fill="#4F46E5"/>
+                                    <rect x="15" y="40" width="30" height="4" fill="#6B7280"/>
+                                </svg>
+                                <p>Communication Hub</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-details">
+                    <h3>Product Details</h3>
+                    <p>Inaya School Management Software is a comprehensive solution designed to digitize and streamline all aspects of school administration. From student enrollment to graduation, Inaya handles every step of the educational journey.</p>
+                    
+                    <div class="feature-sections">
+                        <div class="feature-section">
+                            <h4>🎓 Academic Management</h4>
+                            <p>Complete student information system with grade tracking, attendance management, and academic progress monitoring.</p>
+                        </div>
+                        <div class="feature-section">
+                            <h4>💰 Financial Operations</h4>
+                            <p>Automated fee collection, financial reporting, and budget management with integrated payment gateways.</p>
+                        </div>
+                        <div class="feature-section">
+                            <h4>📱 Communication Platform</h4>
+                            <p>Built-in messaging system connecting teachers, parents, and administrators for seamless communication.</p>
+                        </div>
+                        <div class="feature-section">
+                            <h4>📊 Analytics & Reporting</h4>
+                            <p>Comprehensive reports and analytics to help administrators make data-driven decisions.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn primary" onclick="addToCart(); closeProductModal();">Add to Cart</button>
+                <button class="btn secondary" onclick="window.location.href='cart.html'">Buy Now</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Additional Products Section -->
+    <section class="coming-soon">
+        <div class="container">
+            <h2 class="section-title">More Products Coming Soon</h2>
+            <div class="coming-soon-grid">
+                <div class="coming-soon-card">
+                    <div class="coming-soon-icon">🤖</div>
+                    <h3>Inaya AI Assistant</h3>
+                    <p>Advanced virtual assistant for educational institutions</p>
+                    <span class="coming-soon-badge">Coming Q1 2024</span>
+                </div>
+                <div class="coming-soon-card">
+                    <div class="coming-soon-icon">🧠</div>
+                    <h3>Internova AI Model</h3>
+                    <p>Revolutionary AI model for predictive analytics</p>
+                    <span class="coming-soon-badge">Coming Q2 2024</span>
+                </div>
+                <div class="coming-soon-card">
+                    <div class="coming-soon-icon">📍</div>
+                    <h3>Smart Tracking App</h3>
+                    <p>Comprehensive tracking and monitoring solution</p>
+                    <span class="coming-soon-badge">Coming Q3 2024</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>TechPro Solutions</h3>
+                    <p>Building the future of technology, one solution at a time.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="products.html">Products</a></li>
+                        <li><a href="cart.html">Cart</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact Info</h4>
+                    <p>Email: info@techprosolutions.com</p>
+                    <p>Phone: +1 (555) 123-4567</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 TechPro Solutions. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

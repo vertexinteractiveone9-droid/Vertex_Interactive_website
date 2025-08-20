@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart & Billing - TechPro Solutions</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="index.html">TechPro</a>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="about.html" class="nav-link">About</a>
+                </li>
+                <li class="nav-item">
+                    <a href="products.html" class="nav-link">Products</a>
+                </li>
+                <li class="nav-item">
+                    <a href="cart.html" class="nav-link active">Cart</a>
+                </li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Cart Hero Section -->
+    <section class="cart-hero">
+        <div class="container">
+            <h1 class="page-title">Shopping Cart & Billing</h1>
+            <p class="page-subtitle">Complete your purchase and customize your software package</p>
+        </div>
+    </section>
+
+    <!-- Cart Content -->
+    <section class="cart-content">
+        <div class="container">
+            <div class="cart-layout">
+                <!-- Cart Items -->
+                <div class="cart-section">
+                    <h2 class="section-title">Your Cart</h2>
+                    <div class="cart-items" id="cartItems">
+                        <div class="cart-item">
+                            <div class="item-image">
+                                <svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <rect width="80" height="80" rx="12" fill="url(#cartGradient)"/>
+                                    <path d="M20 25h40v5H20v-5zm0 10h40v5H20v-5zm0 10h25v5H20v-5z" fill="white" opacity="0.9"/>
+                                    <circle cx="55" cy="50" r="8" fill="white" opacity="0.7"/>
+                                    <defs>
+                                        <linearGradient id="cartGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                                            <stop offset="0%" style="stop-color:#4F46E5"/>
+                                            <stop offset="100%" style="stop-color:#7C3AED"/>
+                                        </linearGradient>
+                                    </defs>
+                                </svg>
+                            </div>
+                            <div class="item-details">
+                                <h3>Inaya School Management Software</h3>
+                                <p class="item-description">Comprehensive school management solution with all core features</p>
+                                <div class="item-price">$2,999</div>
+                            </div>
+                            <div class="item-actions">
+                                <button class="remove-btn" onclick="removeFromCart()">×</button>
+                            </div>
+                        </div>
+                        <div class="empty-cart-message" id="emptyCartMessage" style="display: none;">
+                            <div class="empty-cart-icon">🛒</div>
+                            <h3>Your cart is empty</h3>
+                            <p>Add some products to get started</p>
+                            <a href="products.html" class="btn primary">Browse Products</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Billing Section -->
+                <div class="billing-section">
+                    <h2 class="section-title">Billing Information</h2>
+                    <form class="billing-form" id="billingForm" action="https://formsubmit.co/karanlion2009king@gmail.com" method="POST">
+                        <!-- FormSubmit Configuration -->
+                        <input type="hidden" name="_subject" value="New Order - Inaya School Management Software">
+                        <input type="hidden" name="_captcha" value="false">
+                        <input type="hidden" name="_template" value="table">
+                        <input type="hidden" name="product" value="Inaya School Management Software">
+                        <input type="hidden" name="price" value="$2,999">
+                        
+                        <!-- Feature Selection -->
+                        <div class="form-section">
+                            <h3>Feature Selection</h3>
+                            <p class="section-note">Select additional features for your software package</p>
+                            <div class="feature-options">
+                                <label class="feature-option">
+                                    <input type="checkbox" id="mainSoftware" checked disabled>
+                                    <span class="checkmark"></span>
+                                    <div class="feature-info">
+                                        <h4>Main Software</h4>
+                                        <p>Core school management system (Required)</p>
+                                    </div>
+                                </label>
+                                <label class="feature-option">
+                                    <input type="checkbox" id="questionPaper" name="features" value="question-paper">
+                                    <span class="checkmark"></span>
+                                    <div class="feature-info">
+                                        <h4>Question Paper Software</h4>
+                                        <p>Advanced question paper generation and management</p>
+                                    </div>
+                                </label>
+                                <label class="feature-option">
+                                    <input type="checkbox" id="paperlessTest" name="features" value="paperless-test">
+                                    <span class="checkmark"></span>
+                                    <div class="feature-info">
+                                        <h4>Paperless Test App</h4>
+                                        <p>Digital examination and assessment platform</p>
+                                    </div>
+                                </label>
+                            </div>
+                        </div>
+
+                        <!-- Theme Color Options -->
+                        <div class="form-section">
+                            <h3>Theme Color Options</h3>
+                            <p class="section-note">Choose your preferred color theme</p>
+                            <div class="theme-options">
+                                <label class="theme-option">
+                                    <input type="radio" name="theme" value="blue" checked>
+                                    <div class="theme-preview blue-theme">
+                                        <div class="theme-swatch"></div>
+                                        <span>Professional Blue</span>
+                                    </div>
+                                </label>
+                                <label class="theme-option">
+                                    <input type="radio" name="theme" value="green">
+                                    <div class="theme-preview green-theme">
+                                        <div class="theme-swatch"></div>
+                                        <span>Natural Green</span>
+                                    </div>
+                                </label>
+                                <label class="theme-option">
+                                    <input type="radio" name="theme" value="purple">
+                                    <div class="theme-preview purple-theme">
+                                        <div class="theme-swatch"></div>
+                                        <span>Royal Purple</span>
+                                    </div>
+                                </label>
+                                <label class="theme-option">
+                                    <input type="radio" name="theme" value="orange">
+                                    <div class="theme-preview orange-theme">
+                                        <div class="theme-swatch"></div>
+                                        <span>Vibrant Orange</span>
+                                    </div>
+                                </label>
+                            </div>
+                        </div>
+
+                        <!-- School Information -->
+                        <div class="form-section">
+                            <h3>School Information</h3>
+                            <div class="form-grid">
+                                <div class="form-group">
+                                    <input type="text" id="schoolName" name="schoolName" required>
+                                    <label for="schoolName">School Name *</label>
+                                </div>
+                                <div class="form-group">
+                                    <input type="tel" id="phoneNumber" name="phoneNumber" required>
+                                    <label for="phoneNumber">Phone Number *</label>
+                                </div>
+                                <div class="form-group full-width">
+                                    <textarea id="address" name="address" rows="3" required></textarea>
+                                    <label for="address">School Address *</label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Price Note -->
+                        <div class="price-note">
+                            <div class="note-icon">💡</div>
+                            <p><strong>Note:</strong> Selecting any of these options will not change the price of the product. All features are included in the base price.</p>
+                        </div>
+
+                        <!-- Order Summary -->
+                        <div class="order-summary">
+                            <h3>Order Summary</h3>
+                            <div class="summary-item">
+                                <span>Inaya School Management Software</span>
+                                <span>$2,999</span>
+                            </div>
+                            <div class="summary-item">
+                                <span>Additional Features</span>
+                                <span>$0</span>
+                            </div>
+                            <div class="summary-divider"></div>
+                            <div class="summary-total">
+                                <span>Total</span>
+                                <span>$2,999</span>
+                            </div>
+                        </div>
+
+                        <!-- Submit Button -->
+                        <button type="submit" class="submit-btn" id="purchaseBtn">
+                            <span class="btn-text">Complete Purchase</span>
+                            <div class="mail-animation" id="mailAnimation">
+                                <svg class="paper-plane" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                    <path d="m3 3 18 9-18 9v-9z"/>
+                                </svg>
+                            </div>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Thank You Modal -->
+    <div class="modal-overlay" id="thankYouModal">
+        <div class="modal thank-you-modal">
+            <div class="modal-content">
+                <div class="success-icon">
+                    <svg viewBox="0 0 50 50">
+                        <circle class="success-circle" cx="25" cy="25" r="20"/>
+                        <path class="success-check" d="m15,25 l5,5 l15,-15"/>
+                    </svg>
+                </div>
+                <h2>Thank You for Your Purchase!</h2>
+                <p>Your order has been successfully submitted. Our team will contact you soon to complete the setup process.</p>
+                <div class="thank-you-details">
+                    <p><strong>Order ID:</strong> <span id="orderId">TPS-2024-001</span></p>
+                    <p><strong>Next Steps:</strong> We'll reach out within 24 hours</p>
+                </div>
+                <div class="modal-actions">
+                    <button class="btn primary" onclick="redirectToHome()">Go to Homepage</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>TechPro Solutions</h3>
+                    <p>Building the future of technology, one solution at a time.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="products.html">Products</a></li>
+                        <li><a href="cart.html">Cart</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact Info</h4>
+                    <p>Email: info@techprosolutions.com</p>
+                    <p>Phone: +1 (555) 123-4567</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 TechPro Solutions. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

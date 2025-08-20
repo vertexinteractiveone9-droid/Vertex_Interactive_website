@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechPro Solutions - Future of Tech Industry</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="index.html">TechPro</a>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link active">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="about.html" class="nav-link">About</a>
+                </li>
+                <li class="nav-item">
+                    <a href="products.html" class="nav-link">Products</a>
+                </li>
+                <li class="nav-item">
+                    <a href="cart.html" class="nav-link">Cart</a>
+                </li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-container">
+            <h1 class="hero-title" id="heroTitle">Future of Tech Industry</h1>
+            <p class="hero-subtitle">Innovative solutions for tomorrow's challenges</p>
+        </div>
+    </section>
+
+    <!-- Customer Reviews Section -->
+    <section class="reviews">
+        <div class="container">
+            <h2 class="section-title">What Our Clients Say</h2>
+            <div class="reviews-grid">
+                <div class="review-card">
+                    <div class="quote-icon">"</div>
+                    <p class="review-text">Innovation distinguishes between a leader and a follower. TechPro Solutions consistently delivers cutting-edge solutions.</p>
+                    <div class="review-author">
+                        <h4>Sarah Johnson</h4>
+                        <p>CEO, InnovateNow</p>
+                    </div>
+                </div>
+                <div class="review-card">
+                    <div class="quote-icon">"</div>
+                    <p class="review-text">The future belongs to those who embrace technology. Working with TechPro has transformed our business operations completely.</p>
+                    <div class="review-author">
+                        <h4>Michael Chen</h4>
+                        <p>CTO, NextGen Solutions</p>
+                    </div>
+                </div>
+                <div class="review-card">
+                    <div class="quote-icon">"</div>
+                    <p class="review-text">Excellence is not a skill, it's an attitude. TechPro embodies this philosophy in every project they undertake.</p>
+                    <div class="review-author">
+                        <h4>Emily Rodriguez</h4>
+                        <p>Director, FutureTech Corp</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Form Section -->
+    <section class="contact">
+        <div class="container">
+            <h2 class="section-title">Get In Touch</h2>
+            <div class="contact-container">
+                <form class="contact-form" id="contactForm" action="https://formsubmit.co/karanlion2009king@gmail.com" method="POST">
+                    <!-- FormSubmit Configuration -->
+                    <input type="hidden" name="_subject" value="New Contact Form Submission - TechPro Solutions">
+                    <input type="hidden" name="_captcha" value="false">
+                    <input type="hidden" name="_template" value="table">
+                    
+                    <div class="form-group">
+                        <input type="text" id="name" name="name" required>
+                        <label for="name">Name</label>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="email" name="email" required>
+                        <label for="email">Email</label>
+                    </div>
+                    <div class="form-group">
+                        <input type="tel" id="phone" name="phone" required>
+                        <label for="phone">Phone</label>
+                    </div>
+                    <div class="form-group">
+                        <textarea id="message" name="message" rows="5" required></textarea>
+                        <label for="message">Message</label>
+                    </div>
+                    <button type="submit" class="submit-btn">
+                        <span class="btn-text">Send Message</span>
+                        <div class="success-animation" id="successAnimation">
+                            <svg class="checkmark" viewBox="0 0 50 50">
+                                <circle class="checkmark-circle" cx="25" cy="25" r="20"/>
+                                <path class="checkmark-check" d="m15,25 l5,5 l15,-15"/>
+                            </svg>
+                        </div>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>TechPro Solutions</h3>
+                    <p>Building the future of technology, one solution at a time.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="products.html">Products</a></li>
+                        <li><a href="cart.html">Cart</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact Info</h4>
+                    <p>Email: info@techprosolutions.com</p>
+                    <p>Phone: +1 (555) 123-4567</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 TechPro Solutions. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
